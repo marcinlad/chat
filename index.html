@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Chat</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <div class="h-screen w-screen flex flex-col justify-between">
+        <form id="login" class="flex flex-col justify-center items-center h-screen px-4 mx-auto">
+            <h1 class="text-3xl font-bold mb-4">Welcome to the chat!</h1>
+            <input name="username" id="username" type="text" class="mb-4 px-3 w-full border border-gray-300 outline-none text-gray-700" placeholder="Type your username..." />
+            <button class="px-8 py-3 bg-green-500 text-white hover:bg-green-600 transition-colors" type="submit">Enter</button>
+        </form>
+        <div id="room" class="flex flex-col h-screen justify-between hidden">
+            <div id="chat" class="p-3 overflow-auto">
+            </div>
+            <form id="chat-form" class="flex mb-0">
+                <input name="message" id="message" type="text" class="px-3 w-full border-t border-gray-300 outline-none text-gray-700" placeholder="Type your message..." />
+                <button class="px-8 py-3 bg-green-500 text-white hover:bg-green-600 transition-colors" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
